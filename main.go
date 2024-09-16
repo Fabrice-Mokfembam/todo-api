@@ -4,7 +4,7 @@ import (
     "database/sql"
     "fmt"
     "log"
-
+    "github.com/gofiber/fiber/v2/middleware/cors"
     "github.com/gofiber/fiber/v2"
     _ "github.com/go-sql-driver/mysql" 
 )
@@ -19,6 +19,7 @@ func main() {
     fmt.Println("Todo API is starting...")
 
     app := fiber.New()
+    app.Use(cors.New())
 
     db, err := connectToMySQL()
     if err != nil {
