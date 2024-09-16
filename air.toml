@@ -1,0 +1,7 @@
+
+[[input]]
+include = ["main.go", "models/*.go"]
+interval = 1
+debounce = 0.5
+exit-on-error = true
+verbose = true
