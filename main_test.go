@@ -1,5 +1,3 @@
-// File: main_test.go
-
 package main
 
 import (
@@ -17,7 +15,7 @@ func setupTestApp() *fiber.App {
 	app := fiber.New()
 	app.Use(cors.New())
 
-	// Initialize the routes
+	
 	app.Post("/create/todo", createTodoTestHandler)
 	app.Get("/getAll/todos", getAllTodosTestHandler)
 	app.Put("/update/todo/:id", updateTodoTestHandler)
